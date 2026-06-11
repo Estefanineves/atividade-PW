@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Lista</title>
+</head>
+<body>
+
+<script>
+
+    var cores = [];
+
+    cores.push("azul");
+    cores.push("vermelho");
+    cores.push("roxo");
+    cores.push("rosa");
+    cores.push("amarelo");
+    cores.push("verde");
+    cores.push("preto");
+    cores.push("branco");
+    cores.push("laranja");
+    cores.push("lilás");
+
+    console.log("Lista original:");
+    console.log(cores);
+
+    // Remove os 3 últimos
+    cores.pop();
+    cores.pop();
+    cores.pop();
+
+    console.log("Após pop:");
+    console.log(cores);
+
+    // Ordena
+    cores.sort();
+
+    console.log("Lista ordenada:");
+    console.log(cores);
+
+    // Soma dos números
+    var numeros = [1,2,3,4,5];
+
+    var soma = numeros.reduce(function(acumulador, valor){
+        return acumulador + valor;
+    });
+
+    console.log("Soma:");
+    console.log(soma);
+
+    // Mostrar todos os valores
+    console.log("Todos os valores:");
+
+    cores.forEach(function(cor){
+        console.log(cor);
+    });
+
+    // Filter
+    var filtrado = cores.filter(function(cor){
+        return cor.includes("a");
+    });
+
+    console.log("Filter:");
+    console.log(filtrado);
+
+    // Find
+    var encontrado = cores.find(function(cor){
+        return cor === "verde";
+    });
+
+    console.log("Find:");
+    console.log(encontrado);
+
+    // Adicionando item
+    cores.splice(2, 0, "cinza");
+
+    console.log("Adicionando:");
+    console.log(cores);
+
+    // Removendo item
+    cores.splice(1, 1);
+
+    console.log("Removendo:");
+    console.log(cores);
+
+    // Substituindo item
+    cores.splice(0, 1, "prata");
+
+    console.log("Substituindo:");
+    console.log(cores);
+
+    // Lista de alunos
+    var alunos = [
+
+        {nome:"Ana"},
+        {nome:"Carlos"},
+        {nome:"Julia"},
+        {nome:"Pedro"},
+        {nome:"Marina"},
+        {nome:"Lucas"},
+        {nome:"Bruno"},
+        {nome:"Fernanda"},
+        {nome:"Camila"},
+        {nome:"Rafael"}
+
+    ];
+
+    console.log("Alunos:");
+    console.log(alunos);
+
+    console.log("Quantidade de cores:");
+    console.log(cores.length);
+
+</script>
+
+</body>
+</html>
